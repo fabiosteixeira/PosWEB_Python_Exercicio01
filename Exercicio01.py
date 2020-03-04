@@ -27,6 +27,53 @@ print("\n--- Interando uma TUPLA --")
 for item in enumerate(coordenadas):
     print(item)
 
+print("\n--- Utilizando uma lista como fila (queue) --")
+"""
+A utilização de listas como fila refere-se à aplicação do conceito de armazenar itens em "FIFO" - First in, First out, 
+ou seja, o primeiro item a sair da lista é sempre o que foi inserido há mais tempo. Quem chegou primeiro é utilizado primeiro.
+"""
+fila = []
+fila.append('a')
+fila.append('b')
+fila.append('c')
+print("Fila: ", fila)
+
+# Removendo elementos da fila utilizando o método pop (que extrai o elemento mais antigo da lista quando passado o parâmetro 0)
+print("Removendo elementos da lista:")
+print(fila.pop(0))
+print(fila.pop(0))
+print(fila.pop(0))
+print("Fila após remoção de elementos:", fila)
+
+print("\n--- Utilizando uma lista como pilha (stack) --")
+"""
+A utilização de listas como fila refere-se à aplicação do conceito de armazenar itens em "LIFO" - Last in, First out ou em "FILO" - First in, Last out 
+ou seja, o primeiro item a sair da lista é sempre o que foi inserido por último.
+"""
+fila = []
+fila.append('a')
+fila.append('b')
+fila.append('c')
+print("Fila: ", fila)
+# Removendo elementos da fila utilizando o método pop (que extrai o elemento mais novo da lista quando não passado nenhum parâmetro)
+print("Removendo elementos da lista:")
+print(fila.pop())
+print(fila.pop())
+print(fila.pop())
+print("Fila após remoção de elementos:", fila)
+
+print("\n--- O que o statement else faz em um loop? --")
+for n in range(10):
+    for x in range(2,n):
+        if n % x == 0:
+            print(n, 'equals', x, '*', n//x)
+            break
+    else:
+        print(n, 'is a prime number')
+# O comando "else" dentro de um loop é executado sempre que, durante a execução do loop, não é encontrado um comando "break". Desta maneira, é possível controlar a condicional
+# dentro do loop de uma maneira bastante simplificada.
+
+
 
 print("\n\nDigite 's' para rodar as demais simulações ou qualquer outro valor para finalizar a aplicação:")
 text = input()
